@@ -18,8 +18,9 @@
                     <input type="text" v-model="updateTitle" placeholder="Title" required />
                 </div>
                 <div>
-                    <button
-                        class="float-left font-serif font-semibold bg-blue-700 rounded-md text-white p-1 m-1">Update</button>
+                    <button class="float-left font-serif font-semibold bg-blue-700 rounded-md text-white p-1 m-1">
+                        Update
+                    </button>
                 </div>
             </form>
         </div>
