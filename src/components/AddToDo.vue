@@ -41,14 +41,3 @@ export default {
     }
 }
 </script>
-<style scoped>
-/* form{
-    width: 220px;
-}
-button {
-    color: whitesmoke;
-    background-color: red;
-    float: right;
-
-} */
-</style>
