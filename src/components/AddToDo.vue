@@ -8,7 +8,7 @@
             </div>
             <br/>
             <div>
-                <button class=" bg-blue-600 border-1 border-black text-white p-1 rounded-md font-serif font-semibold " > Add </button>
+                <button class=" bg-blue-700 border-1 border-black text-white p-1 rounded-md font-serif font-semibold " > Add </button>
             </div>
         </form>
     </div>
