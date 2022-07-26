@@ -27,8 +27,15 @@ import e from 'express'
             addtododata(e){
                 e.preventDefault()   //this will make sure that the form is not submitted to your file 
                 const newtodo = {
-                    id:
+                    id:Date.now(),  //returns unique date
+                    title:this.title,
+                    completed:false  //default added by us
                 }
+                //send out a event
+                this.$emit("add-todo", newtodo)
+
+                //clear out input field
+                this.title =""
             }
         }
     }
