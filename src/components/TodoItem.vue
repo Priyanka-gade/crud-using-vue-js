@@ -1,6 +1,6 @@
 <template>
-    <div class="grid justify-items-left m-2 p-2 bg-slate-200">
-        <div>
+    <div class="flex flex-col items-center ">
+        <div class="m-2 p-2 bg-slate-200 w-64 ">
             <!-- class="line-through" v-bind:class="{'is-complete':items.completed}" -->
             <p>
                 <input type="checkbox" />
