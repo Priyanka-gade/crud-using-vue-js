@@ -13,7 +13,7 @@
         <div v-if="this.flag">
         <form @submit="updatetodo">
             <div>
-                <input type="text" v-bind="updatetodo" placeholder="title" required/>
+                <input type="text" v-bind="updateTitle" placeholder="title" required/>
             </div>
             <div>
                 <button class="float-left font-serif font-semibold bg-blue-700 rounded-md text-white p-1 m-1">Update</button>
@@ -25,17 +25,28 @@
 <script>
 export default {
     name: "TodoItem component",
-    props: ['items'],
+    props: ['items','Todata'],
     methods:{
         update(){
             this.flag=!this.flag;
         },
+        updatetodo(e){
+            e.preventDefault()
+            this.Todata.filter((items)=>{
+                if(items.id == this.items.id){
+                    //update the title
+                    this.title = this.updateTitle
+                }
+            })
+            //reset the flag
+            this.flag = false
+        }
         
     },
     data(){
         return{
             flag:false,
-            updatetodo: null
+            updateTitle:""
         }
     }
 }
