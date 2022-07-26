@@ -1,6 +1,6 @@
 <template>
     <div class="grid justify-items-left m-2 p-2 bg-slate-200">
-        <div>
+        <div class="">
             <p>
                 <input type="checkbox" v-bind:checked="items.completed " />
                 {{ items.title }}
