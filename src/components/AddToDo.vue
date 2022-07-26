@@ -2,7 +2,7 @@
     <div class="grid justify-items-center">
         <br/>
         <h1 class="text-center">ToDos App </h1>
-        <form class="grid justify-items-left bg-slate-200 p-7 w-64" @submit="addtododata">
+        <form @submit="addtododata" class="grid justify-items-left bg-slate-200 p-7 w-64" >
             <div>
                 <input type="text" v-model="title" placeholder="Title" required/> 
             </div>
@@ -14,7 +14,7 @@
     </div>
 </template>
 <script>
-import e from 'express'
+
 
     export default{
         name : "AddToDo component",

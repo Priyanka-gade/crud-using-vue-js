@@ -1,7 +1,7 @@
 <template>
   <div>
-    <AddToDo></AddToDo>
-    <ToDos v-bind:data="data"></ToDos>
+    <AddToDo v-on:add-todo="addtododata"></AddToDo>
+    <ToDos v-bind:Todata="Todata"></ToDos>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     components: { AddToDo, ToDos },
     data(){
   return{
-    data :[
+    Todata :[
       {
         id:'1',
         title:'Todo 1',
@@ -42,6 +42,12 @@ export default {
         completed:true
       }
     ]
+  }
+},
+methods:{
+  addtododata(newtodo){     //v-on: add-todo ="addtododata" used
+    //adding the dodata to the Todata array
+    this.Todata=[...this.Todata,newtodo ]
   }
 }
 }

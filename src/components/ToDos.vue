@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div v-for="items in data" :key="items">
+    <div v-for="items in Todata" :key="items">
     <!-- {{items.title}} -->
     <TodoItem v-bind:items="items"></TodoItem>
     </div>
@@ -11,7 +11,7 @@ import TodoItem from './TodoItem.vue';
 
 export default{
     name: "ToDos componemt",
-    props: ["data"],
+    props: ["Todata"],
     components: { TodoItem }
 }
 </script>
