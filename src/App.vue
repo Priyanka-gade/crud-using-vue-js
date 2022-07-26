@@ -1,26 +1,53 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <AddToDo></AddToDo>
+    <ToDos v-bind:data="data"></ToDos>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddToDo from './components/AddToDo.vue'
+import ToDos from './components/ToDos.vue'
+
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name:'App',
+    components: { AddToDo, ToDos },
+    data(){
+  return{
+    data :[
+      {
+        id:'1',
+        title:'Todo 1',
+        completed:false
+      },
+      {
+        id:'2',
+        title:'Todo 2',
+        completed:true
+      },
+      {
+        id:'3',
+        title:'Todo 3',
+        completed:false
+      },
+      {
+        id:'4',
+        title:'Todo 4',
+        completed:true
+      },
+      {
+        id:'5',
+        title:'Todo 5',
+        completed:true
+      }
+    ]
   }
 }
+}
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
