@@ -4,7 +4,10 @@
         <p>
         <input type="checkbox"/>
         {{items.title}}
-        <button class="float-right"><i id="delete" class="fa fa-trash" aria-hidden="true" ></i></button>
+        
+            <button class="float-right"><i id="delete" class="fa fa-trash" aria-hidden="true" ></i></button>
+        <button class="float-right"><i id="edit" class='fas fa-edit'></i></button>
+        
         </p>
     </div>
 </div>
