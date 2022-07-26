@@ -13,7 +13,7 @@
         <div v-if="this.flag">
         <form @submit="updatetodo">
             <div>
-                <input type="text" v-bind:"updatetodo" placeholder="title" required/>
+                <input type="text" v-bind="updatetodo" placeholder="title" required/>
             </div>
             <div>
                 <button class="float-left font-serif font-semibold bg-blue-700 rounded-md text-white p-1 m-1">Update</button>
