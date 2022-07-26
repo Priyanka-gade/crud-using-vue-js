@@ -1,10 +1,10 @@
 <template>
-<div>
+<div class="grid justify-items-left m-2 p-2 bg-slate-200">
     <div>
         <p>
         <input type="checkbox"/>
         {{items.title}}
-        <button class="bg-red-500 rounded-md border-solid border-1 border-slate-50">delete</button>
+        <button class="float-right"><i id="delete" class="fa fa-trash" aria-hidden="true" ></i></button>
         </p>
     </div>
 </div>
