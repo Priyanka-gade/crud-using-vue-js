@@ -1,8 +1,8 @@
 <template>
 <div>
-    <div v-for="items in data" :key="items">
+    <div v-for="items in Todata" :key="items">
     <!-- {{items.title}} -->
-    <TodoItem v-bind:items="items"></TodoItem>
+    <TodoItem v-bind:Todata="Todata" v-bind:items="items" v-on:delete-todo="$emit('delete-todo',items.id)"></TodoItem>
     </div>
 </div>
 </template>
@@ -11,7 +11,7 @@ import TodoItem from './TodoItem.vue';
 
 export default{
     name: "ToDos componemt",
-    props: ["data"],
+    props: ["Todata"],
     components: { TodoItem }
 }
 </script>
