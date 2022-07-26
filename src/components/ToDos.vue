@@ -2,7 +2,7 @@
 <div>
     <div v-for="items in Todata" :key="items">
     <!-- {{items.title}} -->
-    <TodoItem v-bind:items="items"></TodoItem>
+    <TodoItem v-bind:items="items" v-on:delete-todo="$emit('delete-todo',items.id)"></TodoItem>
     </div>
 </div>
 </template>

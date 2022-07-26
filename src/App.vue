@@ -1,7 +1,7 @@
 <template>
   <div>
     <AddToDo v-on:add-todo="addtododata"></AddToDo>
-    <ToDos v-bind:Todata="Todata"></ToDos>
+    <ToDos v-bind:Todata="Todata" v-on:delete-todo="deletetododata"></ToDos>
   </div>
 </template>
 
@@ -48,8 +48,11 @@ methods:{
   addtododata(newtodo){     //v-on: add-todo ="addtododata" used
     //adding the dodata to the Todata array
     this.Todata=[...this.Todata,newtodo ]
+  },
+  deletetododata(id){
+    this.Todata= this.Todata.filter((items)=>items.id !== id)
   }
-}
+}  
 }
 
 </script>
